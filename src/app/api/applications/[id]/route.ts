@@ -3,11 +3,12 @@ import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
-type Params = { params: { id: string } };
+type Params = { params: Promise<{ id: string }> };
 
 export async function DELETE(req: Request, { params }: Params) {
   const { userId } = await auth();
-  const id = params?.id ?? new URL(req.url).pathname.split("/").pop();
+  const reparam = await params;
+  const id = reparam?.id ?? new URL(req.url).pathname.split("/").pop();
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
