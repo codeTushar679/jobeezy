@@ -1,0 +1,7 @@
+.next
+node_modules
+.gitignore
+.env
+.dockerignore
+Dockerfile
+src/generated
