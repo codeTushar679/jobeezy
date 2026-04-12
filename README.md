@@ -16,9 +16,9 @@ Jobeezy is a full-stack job portal website built with modern technologies. Users
 - Clerk authentication
 ## Demo
 
-Project deployed in Render, here's live project link:
+Project deployed in Vercel, here's live project link:
 
-https://jobeezy1.onrender.com
+https://jobeezy-qyxxjoa3h-tushar-ranas-projects.vercel.app/
 
 Project deployed in Docker, here's project link:
 
